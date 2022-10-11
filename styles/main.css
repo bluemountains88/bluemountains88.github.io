@@ -8,6 +8,7 @@ body {
     font-family: 'Sawarabi Mincho', serif;
 }
 
+
 header {
     align-items: center;
     background: #8FC953;
@@ -40,7 +41,8 @@ header >  ul, li, a {
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: "contenido contenido contenido"
+    grid-template-areas: "carrousel carrousel carrousel"
+                         "contenido contenido contenido"
                          "widget-1 widget-2 widget-3"
                          "newsletter newsletter newsletter";
     margin: 20px auto;
@@ -83,13 +85,20 @@ header >  ul, li, a {
     grid-area: newsletter;
 }
 
+.contenedor .carrousel {
+    grid-area: carrousel;
+}
+
+.carrousel > img {
+    max-width: 100%;
+}
+
 .footer {
     align-items: center;
     background: #8FC953;
     color: #FFFFFF;
     display: flex;
     height: 50px;
-    padding: 20px;
     width: 100%;
 }
 
