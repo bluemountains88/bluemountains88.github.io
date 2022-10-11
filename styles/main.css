@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E9F8FF;
+    font-family: 'Sawarabi Mincho', serif;
+}
+
+header {
+    background: #25A5E1;
+    color: #FFFFFF;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "contenido contenido contenido"
+                         "widget-1 widget-2 widget-3"
+                         "newsletter newsletter newsletter";
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 90%;
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .newsletter {
+    background: #FFFFFF;
+    border-radius: 4px;
+    grid-area: contenido;
+    padding: 20px;
+}
+
+.contenedor .widget-1, 
+.contenedor .widget-2,
+.contenedor .widget-3 {
+    background: #8FC953;
+}
+
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+
+.contenedor .widget-3 {
+    grid-area: widget-3;
+}
+
+.contenedor .newsletter {
+    grid-area: newsletter;
+}
+
+.footer {
+    display: flex;
+    vertical-align: middle;
+    height: 50px;
+    background: #25A5E1;
+    color: #FFFFFF;
+}
+
+
