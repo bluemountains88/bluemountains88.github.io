@@ -9,9 +9,29 @@ body {
 }
 
 header {
-    background: #25A5E1;
+    align-items: center;
+    background: #8FC953;
     color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
     width: 100%;
+}
+
+header >  ul, li, a {
+    color: white;
+    display: inline-flex;
+    font-size: medium;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.material-symbols-sharp {
+    color: #FFFFFF;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 00,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 .contenedor {
@@ -59,10 +79,12 @@ header {
 }
 
 .footer {
-    background: #25A5E1;
+    align-items: center;
+    background: #8FC953;
     color: #FFFFFF;
     display: flex;
     height: 50px;
+    padding: 20px;
     width: 100%;
 }
 
