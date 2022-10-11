@@ -11,6 +11,7 @@ body {
 header {
     background: #25A5E1;
     color: #FFFFFF;
+    width: 100%;
 }
 
 .contenedor {
@@ -23,7 +24,7 @@ header {
                          "newsletter newsletter newsletter";
     margin: 20px auto;
     max-width: 1000px;
-    width: 90%;
+    width: 100%;
 }
 
 .contenedor > div,
@@ -58,11 +59,28 @@ header {
 }
 
 .footer {
-    display: flex;
-    vertical-align: middle;
-    height: 50px;
     background: #25A5E1;
     color: #FFFFFF;
+    display: flex;
+    height: 50px;
+    width: 100%;
 }
 
+@media screen and (max-width: 768px) { 
+    .contenedor {
+        grid-template-areas: "contenido contenido contenido"
+                             "widget-1 widget-2 widget-3"
+                             "newsletter newsletter newsletter"
+    }
+}
 
+@media screen and (max-width: 480px) {
+    .contenedor {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "contenido"
+                             "widget-1"
+                             "widget-2"
+                             "widget-3"
+                             "newsletter";
+    }
+}
