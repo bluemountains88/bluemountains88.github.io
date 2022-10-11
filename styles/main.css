@@ -13,7 +13,7 @@ body {
     top:0;
 }
 
-header {
+.header {
     align-items: center;
     background: #8FC953;
     color: #FFFFFF;
@@ -22,13 +22,18 @@ header {
     width: 100%;
 }
 
-header >  ul, li, a {
+.header >  ul, li, a {
     color: white;
     display: inline;
     float: right;
     font-size: medium;
     text-decoration: none;
     padding: 5px;
+}
+
+li > a:hover {
+    color: #25A5E1;
+    font-weight: 700;
 }
 
 .material-symbols-sharp {
