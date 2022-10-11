@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #E9F8FF;
+    background-color: #25A5E1;
     font-family: 'Sawarabi Mincho', serif;
 }
 
@@ -13,13 +13,14 @@ header {
     background: #8FC953;
     color: #FFFFFF;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
 }
 
 header >  ul, li, a {
     color: white;
-    display: inline-flex;
+    display: inline;
+    float: right;
     font-size: medium;
     text-decoration: none;
     padding: 5px;
@@ -54,11 +55,15 @@ header >  ul, li, a {
     border-radius: 4px;
     grid-area: contenido;
     padding: 20px;
+    box-shadow: 11px 7px 20px -5px rgba(79,79,79,0.77);
+    -webkit-box-shadow: 11px 7px 20px -5px rgba(79,79,79,0.77);
+    -moz-box-shadow: 11px 7px 20px -5px rgba(79,79,79,0.77);
 }
 
 .contenedor .widget-1, 
 .contenedor .widget-2,
 .contenedor .widget-3 {
+    color: #FFFFFF;
     background: #8FC953;
 }
 
