@@ -105,9 +105,11 @@ li > a:hover {
 .footer {
     align-items: center;
     background: #8FC953;
+    bottom: 0px;
     color: #FFFFFF;
     display: flex;
     height: 50px;
+    position: absolute;
     width: 100%;
 }
 
