@@ -109,7 +109,6 @@ li > a:hover {
     color: #FFFFFF;
     display: flex;
     height: 50px;
-    position: absolute;
     width: 100%;
 }
 
