@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');    
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -9,40 +12,60 @@ body {
 }
 
 .header {
-    position:sticky;
-    top:0;
-}
-
-.header {
-    align-items: center;
     background: #8FC953;
-    color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
+    height: 100px;
+    left: 0;
+    position: fixed;
+    top: 0;
     width: 100%;
 }
 
-.header >  ul, li, a {
+.logo {
+    font-size: 30px;
+    line-height: 100px;
+    padding: 0 30px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 30px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 100px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link:hover {
+    color:#25A5E1;
+    transition: 0.5s;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link {
     color: white;
-    display: inline;
-    float: right;
-    font-size: medium;
     text-decoration: none;
-    padding: 5px;
 }
 
-li > a:hover {
-    color: #25A5E1;
-    font-weight: 700;
-}
-
-.material-symbols-sharp {
-    color: #FFFFFF;
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 00,
-    'GRAD' 0,
-    'opsz' 48
+.nav-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
 }
 
 .contenedor {
@@ -55,8 +78,8 @@ li > a:hover {
                          "widget-1 widget-2 widget-3"
                          "newsletter newsletter newsletter";
     margin: 20px auto;
-    max-width: 1000px;
-    width: 100%;
+    padding-top: 100px;
+    width: 90%;
 }
 
 .contenedor > div,
@@ -106,27 +129,81 @@ li > a:hover {
     align-items: center;
     background: #8FC953;
     color: #FFFFFF;
-    display: flex;
-    height: 50px;
+    height: 60px;
     left: 0px;
+    line-height: 60px;
     width: 100%;
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 768px){
+    .header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 25px;
+        line-height: 60px;
+        padding: 0 20px;
+    }
+
+    .nav-menu {
+        align-items: center;
+        background-color: #2c3e59;
+        flex-direction: column;
+        height: calc(100% - 60px);
+        left: 0;
+        margin-right: 20px;
+        overflow-y: auto;
+        padding: 20px 0;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        left: 100%;
+        transition: left 0.5s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+    .nav-toggle:focus:not(:focus:visible) {
+        outline: none;
+    }
+
     .contenedor {
-        grid-template-areas: "contenido contenido contenido"
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "carrousel carrousel carrousel"
+                             "contenido contenido contenido"
                              "widget-1 widget-2 widget-3"
-                             "newsletter newsletter newsletter"
+                             "newsletter newsletter newsletter";
+        padding-top: 60px;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 480px) {
+
+    .carrousel > img {
+        max-width: 479px;
+    }
+
     .contenedor {
         grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: "contenido"
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: "carrousel"
+                             "contenido"
                              "widget-1"
                              "widget-2"
                              "widget-3"
                              "newsletter";
+        width: 100%;
     }
 }
