@@ -94,22 +94,29 @@ body {
     -moz-box-shadow: 11px 7px 20px -5px rgba(79,79,79,0.77);
 }
 
-.contenedor .widget-1, 
+.contenedor .widget-1,
 .contenedor .widget-2,
 .contenedor .widget-3 {
-    color: #FFFFFF;
-    background: #8FC953;
+    align-items: center;
+    display: flex;
+    grid-area: widget-1;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 .contenedor .widget-1 {
+    background-color: peru;
     grid-area: widget-1;
 }
 
 .contenedor .widget-2 {
+    background-color: cadetblue;
     grid-area: widget-2;
 }
 
 .contenedor .widget-3 {
+    background-color: darkslateblue;
     grid-area: widget-3;
 }
 
@@ -133,6 +140,10 @@ body {
     left: 0px;
     line-height: 60px;
     width: 100%;
+}
+
+.widget-img {
+    width:300px;
 }
 
 @media screen and (max-width: 768px){
@@ -200,7 +211,7 @@ body {
         grid-template-rows: repeat(6, auto);
         grid-template-areas: "carrousel"
                              "contenido"
-                             "widget-1"
+                             "widget-1" 
                              "widget-2"
                              "widget-3"
                              "newsletter";
